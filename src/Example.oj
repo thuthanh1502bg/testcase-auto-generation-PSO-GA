@@ -1,0 +1,31 @@
+import GeneticAlgorithm.InstrumentCode.*;
+public class Example instantiates BranchInstrumentor {
+
+	public Example() {
+		super();
+	}
+	public  String checkTriangle(Triangle1 t) {
+		int side1 = t.side1;
+		int side2 = t.side2;
+		int side3 = t.side3;
+		String type = "";
+		if ((side1 + side2 > side3) && (side3 + side2 > side1) && (side1 + side3 > side2)) {
+			if ((side1 != side2) && (side1 != side3) && (side2 != side3)) {
+				type = "Is triangle scalene";
+			} else {
+				if (((side1 == side2) && (side1 != side3)) || ((side1 == side3) && (side1 != side2)) || ((side2 == side3) && (side2 != side1))) {
+					type = "Is triangle isosceles ";
+				} else {
+					type = "Is triangle equilateral ";
+				}
+			}
+		} else {
+			type = "Not a triangle";
+		}
+		return type;
+	}
+
+
+
+
+}

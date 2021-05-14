@@ -1,0 +1,41 @@
+public class Triangle1
+{
+
+    int side1;
+
+    int side2;
+
+    int side3;
+
+    public Triangle1()
+    {
+    }
+
+    public Triangle1( int side1, int side2, int side3 )
+    {
+        super();
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
+    }
+
+    public Triangle1( int side1, int side2 )
+    {
+        super();
+
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side2;
+    }
+
+    public Triangle1( int side1 )
+    {
+        super();
+
+        this.side1 = side1;
+        this.side2 = side1;
+        this.side3 = side1;
+    }
+
+
+}

@@ -1,0 +1,55 @@
+import GeneticAlgorithm.InstrumentCode.*;
+import java.util.*;
+
+
+
+public class Triangle instantiates BranchInstrumentor{
+
+	int side1;
+	int side2;
+	int side3;
+	public Triangle() {
+	}
+	public Triangle(int side1, int side2, int side3) {
+	       super();
+	       this.side1 = side1;
+	       this.side2 = side2;
+	       this.side3 = side3; 
+	 }
+	 public Triangle(int side1, int side2) {
+	       super();
+	       this.side1 = side1;
+	       this.side2 = side2;
+	       this.side3 = side2;
+	 }
+	 public Triangle(int side1) {
+	       super();
+	       this.side1 = side1;
+	       this.side2 = side1;
+	       this.side3 = side1;
+	 }
+	 public Triangle(Triangle t){
+	       super();
+	       this.side1 = t.side1;
+	       this.side2 = t.side2;
+	       this.side3 = t.side3;
+	 
+	 }
+	 public String checkTriangle() {
+	       String type = "";
+	       if ((side1 + side2 > side3) && (side3 + side2 > side1) && (side1 + side3 > side2)) {
+	           if ((side1 != side2) && (side1 != side3) && (side2 != side3)) {
+	               type = "Is triangle scalene";
+	           } else {
+	                  if (((side1 == side2) && (side1 != side3)) || ((side1 == side3) && (side1 != side2)) || ((side2 == side3) && (side2 != side1))) {
+	                      type = "Is triangle isosceles ";
+	                  } else {
+	                         type = "Is triangle equilateral ";
+	                  }
+	           }
+	        } else {
+	               type = "Not a triangle";
+	        }
+	        return type;
+	  }
+}

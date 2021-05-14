@@ -1,0 +1,106 @@
+import GeneticAlgorithm.InstrumentCode.*;
+public class InsuranceProgram instantiates BranchInstrumentor{
+	int age;
+	int accidents;
+    public InsuranceProgram(int age,int accidents)
+    {
+        super();
+        this.age = age;
+		this.accidents = accidents;
+    }
+	public int getInsurance() {
+		int pay = 0;
+		int basicInsurance = 500;
+		int surcharge = 100; // under 25 years
+		if (this.age < 25) {
+			basicInsurance += surcharge;
+			System.out.println("Additional surcharge " + surcharge);
+			switch (this.accidents) {
+			case 0:
+				System.out.println("No surcharge");
+				System.out.println("Total amount to pay: " + basicInsurance);
+				pay = basicInsurance;
+				break;
+			case 1:
+				System.out.println("Additional surcharge for accident: " + 50 + " \ntotal amount to pay: "
+						+ (basicInsurance + 50)); // Pay 650
+				pay = basicInsurance + 50;
+				break;
+			case 2:
+				System.out.println("Additional surcharge for accident: " + 125 + " \ntotal amount to pay: "
+						+ (basicInsurance + 125)); // Pay 725
+				pay = basicInsurance + 125;
+				break;
+			case 3:
+				System.out.println("Additional surcharge for accident: " + 225 + " \ntotal amount to pay: "
+						+ (basicInsurance + 225)); // Pay 825
+				pay = basicInsurance + 225;
+				break;
+			case 4:
+				System.out.println("Additional surcharge for accident: " + 375 + " \ntotal amount to pay: "
+						+ (basicInsurance + 375)); // Pay 975
+				pay = basicInsurance + 375;
+				break;
+			case 5:
+				System.out.println("Additional surcharge for accident: " + 575 + " \ntotal amount to pay: "
+						+ (basicInsurance + 575)); // Pay 1175
+				pay = basicInsurance + 575;
+				break;
+			default:
+            	 System.out.println( "No insurance" );
+                 pay = basicInsurance;
+				break;
+			
+			}
+		} else {
+			System.out.println("No additional surcharge");
+			switch (this.accidents) {
+			case 0:
+				System.out.println("No surcharge");
+				System.out.println("Total amount to pay: " + basicInsurance);
+				pay = basicInsurance;
+				break;
+			case 1:
+				System.out.println("Additional surcharge for accident: " + 50 + " \ntotal amount to pay: "
+						+ (basicInsurance + 50)); // Pay 550
+				pay = basicInsurance + 50;
+				break;
+			case 2:
+				System.out.println("Additional surcharge for accident: " + 125 + " \ntotal amount to pay: "
+						+ (basicInsurance + 125)); // Pay 625
+				pay = basicInsurance + 125;
+				break;
+			case 3:
+				System.out.println("Additional surcharge for accident: " + 225 + " \ntotal amount to pay: "
+						+ (basicInsurance + 225)); // Pay 725
+				pay = basicInsurance + 225;
+				break;
+			case 4:
+				System.out.println("Additional surcharge for accident: " + 375 + " \ntotal amount to pay: "
+						+ (basicInsurance + 375)); // Pay 875
+				pay = basicInsurance + 375;
+				break;
+			case 5:
+				System.out.println("Additional surcharge for accident: " + 575 + " \ntotal amount to pay: "
+						+ (basicInsurance + 575)); // Pay 1075
+				pay = basicInsurance + 575;
+				break;
+			default:
+            	 System.out.println( "No insurance" );
+                 pay = basicInsurance;
+				break;
+			}
+			}
+		return pay;
+	}
+
+	 public void checkResult(){
+            if(age>100){
+                accidents=0;
+            }
+            else{
+                accidents=100;
+            }
+        }
+
+}

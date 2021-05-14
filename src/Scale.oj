@@ -1,0 +1,52 @@
+import GeneticAlgorithm.InstrumentCode.*;
+import java.util.*;
+public class Scale instantiates BranchInstrumentor{
+     int width;
+     int height;
+
+      Point point;
+
+         public Scale(Point point) {
+             this.point = point;
+             width= point.getX();
+             height=point.getY();
+         }
+
+    public Scale(int width, int height) {
+
+        if(width<0)
+            width=1;
+        if(height<0)
+            height=1;
+        this.width = width;
+        this.height = height;
+    }
+
+    public Scale() {
+
+        this.width=1;
+        this.height=1;
+    }
+
+    public void changeState(){
+            int temp=width;
+            width=height;
+            height=temp;
+        }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+}

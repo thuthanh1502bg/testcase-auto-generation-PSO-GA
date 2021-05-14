@@ -1,0 +1,6 @@
+Triangle1.Triangle1()
+Triangle1.Triangle1(int[0;100],int[0;100],int[0;100])
+Triangle1.Triangle1(int[0;100],int[0;100])
+Triangle1.Triangle1(int[0;100])
+Example.Example()
+Example.checkTriangle(Triangle1)

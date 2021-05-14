@@ -1,0 +1,36 @@
+import GeneticAlgorithm.InstrumentCode.*;
+import java.util.*;
+
+
+public class BinarySearch instantiates BranchInstrumentor{
+
+    public BinarySearch(){}
+
+    public int binarySearch( MyInt[] V, Point point, int k ){
+            int x=point.getX();
+            int n = V.length;
+            int low;
+            int high;
+            int mid;
+            low = 0;
+            high = n - 1;
+            if(k>n){
+                k=k++;
+            }
+            while (low <= high) {
+                mid = (low + high) / 2;
+                if (x < V[mid].getNumber()) {
+                    high = mid - 1;
+                } else {
+                    if (x > V[mid].getNumber()) {
+                        low = mid + 1;
+                    } else {
+                        return mid;
+                    }
+                }
+            }
+            return -1;
+        }
+
+
+}

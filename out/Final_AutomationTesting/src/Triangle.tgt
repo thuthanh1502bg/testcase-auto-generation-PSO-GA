@@ -1,0 +1,2 @@
+Triangle.Triangle(): 1
+Triangle.checkTriangle(int,int,int): 2, 3, 4, 5, 6, 7, 8

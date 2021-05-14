@@ -1,0 +1,6 @@
+Triangle.Triangle()
+Triangle.Triangle(int,int,int)
+Triangle.Triangle(int,int)
+Triangle.Triangle(int)
+Triangle.Triangle(Triangle)
+Triangle.checkTriangle()

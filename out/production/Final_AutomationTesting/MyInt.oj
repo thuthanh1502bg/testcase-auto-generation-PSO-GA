@@ -1,0 +1,21 @@
+import GeneticAlgorithm.InstrumentCode.*;
+import java.util.*;
+
+public class MyInt instantiates BranchInstrumentor{
+    private int number;
+    public MyInt() {
+        number=1;
+    }
+
+    public MyInt(int number) {
+        this.number = number;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+}
